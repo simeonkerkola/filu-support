@@ -1,0 +1,43 @@
+name: Feature request
+description: Suggest an improvement to Filu.
+title: "Feature: "
+labels: ["feature request"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem should this solve?
+      placeholder: "I want to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like Filu to do?
+      placeholder: "It would help if Filu could..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Product area
+      options:
+        - File conversion
+        - File compression
+        - Batch workflow
+        - Desktop app
+        - Website
+        - Account or payment
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Any workaround you use today?
+      placeholder: "I currently use..."
+    validations:
+      required: false

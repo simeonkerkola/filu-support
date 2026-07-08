@@ -1,0 +1,67 @@
+name: Bug report
+description: Report something that did not work.
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      placeholder: "Describe the problem."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open...
+        2. Add...
+        3. Choose...
+        4. Click...
+    validations:
+      required: true
+
+  - type: input
+    id: conversion
+    attributes:
+      label: Conversion
+      placeholder: "Example: PNG to JPG, MP4 to MP3, PDF to PNG"
+    validations:
+      required: false
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: "Example: Chrome 126, Safari 18"
+    validations:
+      required: false
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "Example: macOS, Windows, Linux, iOS, Android"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: app
+    attributes:
+      label: Where did this happen?
+      options:
+        - Web app
+        - Desktop app
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Do not include private files, personal data, or sensitive information.
+    validations:
+      required: false

@@ -1,0 +1,62 @@
+name: New file type or conversion
+description: Request support for a file type or conversion.
+title: "Add support for "
+labels: ["file support"]
+body:
+  - type: input
+    id: input-type
+    attributes:
+      label: Input file type
+      description: What file type do you have?
+      placeholder: "Example: HEIC, MKV, DOCX, CBR"
+    validations:
+      required: true
+
+  - type: input
+    id: output-type
+    attributes:
+      label: Output file type
+      description: What do you want to convert it to?
+      placeholder: "Example: JPG, MP4, PDF, ZIP"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: where-needed
+    attributes:
+      label: Where do you need this?
+      options:
+        - Web app
+        - Desktop app
+        - Both
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: What are you trying to do?
+      description: A short description helps prioritize the request.
+      placeholder: "I have files from... and need to convert them so I can..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: file-details
+    attributes:
+      label: File details
+      description: Include anything relevant, such as codec, subtitles, metadata, pages, attachments, or where the file came from.
+      placeholder: "Example: MKV with H.265 video and subtitles"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: sample
+    attributes:
+      label: Sample file
+      options:
+        - label: I can share a public sample file if needed.
+          required: false
+        - label: I cannot share a sample because the file is private or sensitive.
+          required: false
